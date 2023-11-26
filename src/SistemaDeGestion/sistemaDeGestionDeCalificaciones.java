@@ -72,3 +72,12 @@ public class SistemaDeGestionDeCalificaciones {
 	
 	    System.out.println("==================================================================\n"
                          + "==================================================================\n");
+
+ 	    // Ingresar estudiantes
+	    for (int i = 0; i < totalEstudiantes; i++) {
+	        System.out.println("Ingrese el nombre completo del estudiante " + (i + 1) + "<apellido, nombre1 nombre2");
+	        estudiantes[i] = scanner.nextLine();
+	    }
+	
+	    System.out.println("==================================================================\n"
+                         + "==================================================================\n");
