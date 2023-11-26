@@ -10,11 +10,11 @@ public class SistemaDeGestionDeCalificaciones {
 
         // VARIABLES
         int totalAsignaturas = 0;
-	int totalEstudiantes = 0;
+	    int totalEstudiantes = 0;
 
         // VECTORES
         String[] asignaturas = new String[10];
-	String[] estudiantes = new String[30];
+	    String[] estudiantes = new String[30];
 
         // MATRIZ     
         
@@ -59,4 +59,16 @@ public class SistemaDeGestionDeCalificaciones {
             }
         }
         System.out.println("==================================================================\n"
+                         + "==================================================================\n");
+
+	    System.out.println("Por favor, ingrese la cantidad de estudiantes. No debe superar el maximo de 30.");
+	    totalEstudiantes = scanner.nextInt();
+	
+	    // Valida la cantidad de estudiantes que se ingresaron
+	    if(totalEstudiantes < 1 || totalEstudiantes > 30) {
+	        System.out.println("ERROR: el numero de estudiantes debe ser entre 1 y 30.");
+	        return;	
+	    }
+	
+	    System.out.println("==================================================================\n"
                          + "==================================================================\n");
