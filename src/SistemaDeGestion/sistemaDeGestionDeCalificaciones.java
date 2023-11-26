@@ -20,7 +20,22 @@ public class sistemaDeGestionDeCalificaciones {
             System.out.println("ERROR: el numero de asignatura a ingresar debe estar entre 1 y 10.");
             return; // Sale del programa en caso de haber un error       
             
-        }     
+        } 
+        
+        // Vector para almacenar las asignaturas
+        String[] asignaturas = new String[cantidadDeAsignaturas];
+        
+        // Ingresa los nombres de las asignaturas
+        for (int j = 0; j < cantidadDeAsignaturas; j++) {
+            System.out.println("Ingrese el nombre de la asignatura " + (j + 1) + ": ");
+            asignaturas[j] = scanner.next();
+        }
+        
+        // Asignaturas que se ingresaron
+        System.out.println("Asignaturas ingresadas: ");
+        for (String asignatura : asignaturas) {
+            System.out.println(asignatura);
+        }
 
     }
     
