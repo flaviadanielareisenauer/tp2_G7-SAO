@@ -111,15 +111,14 @@ public class SistemaDeGestionDeCalificaciones {
 	}
 	
 	// Listado de notas generadas
-
-	
-	
-	
-	
-	
-	
-	
-
+	System.out.println("*** NOTAS INGRESADAS ***");
+	for (int i = 0; i < totalEstudiantes; i++) {
+	    System.out.println(estudiantes[i] + ": ");
+	    for (int j = 0; j < totalAsignaturas; j++) {
+		System.out.println(asignaturas[j] + " = " + notas[i][j] + " ");
+	    }
+	    System.out.println();
+	}
     }
 
 }
