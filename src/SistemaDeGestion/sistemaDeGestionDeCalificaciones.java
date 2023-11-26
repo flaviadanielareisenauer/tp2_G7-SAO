@@ -1,12 +1,14 @@
 package SistemaDeGestion;
 
 import java.util.Scanner;
+import java.util.Random;
 
 public class SistemaDeGestionDeCalificaciones {
 
     public static void main(String[] args) {
-        // ENTRADA 
+
         Scanner scanner = new Scanner(System.in);
+	Random random = new Random();
 
         // VARIABLES
         int totalAsignaturas = 0;
@@ -17,9 +19,10 @@ public class SistemaDeGestionDeCalificaciones {
 	String[] estudiantes = new String[30];
 
         // MATRIZ     
-        
+	int[][] notas = new int[30][10];        
         
 
+	
         // Mensaje de bienvenida
         System.out.println(
                 "************************************************************\n"
@@ -28,7 +31,7 @@ public class SistemaDeGestionDeCalificaciones {
         );
 
         // Enter para continuar...
-        System.out.println("Por favor, presione Enter para continuar...");
+        System.out.println("Por favor, presione ENTER para continuar...");
         scanner.nextLine();
 
         System.out.println("Por favor, ingrese la cantidad de asignaturas. No deben superar el maximo de 10: ");
@@ -38,7 +41,7 @@ public class SistemaDeGestionDeCalificaciones {
 	
 	// Valida la cantidad de asignaturas que se ingresaron
         if (totalAsignaturas < 1 || totalAsignaturas > 10) {
-            System.out.println("ERROR: el numero de asignaturas debe ser entre 1 y 10.");
+            System.out.println(" ----ERROR: el numero de asignaturas debe ser entre 1 y 10.----");
             return; // cierra el programa si hay un error
         }   
 	
@@ -70,7 +73,7 @@ public class SistemaDeGestionDeCalificaciones {
 	
 	// Valida la cantidad de estudiantes que se ingresaron
 	if (totalEstudiantes < 1 || totalEstudiantes > 30) {
-	    System.out.println("ERROR: el numero de estudiantes debe ser entre 1 y 30.");
+	    System.out.println("----ERROR: el numero de estudiantes debe ser entre 1 y 30.----");
 	    return;	
 	}
 	
@@ -96,6 +99,19 @@ public class SistemaDeGestionDeCalificaciones {
 	
 	System.out.println("==================================================================\n"
                          + "==================================================================\n");
+	
+	
+	
+	// Genera notas aleatorias
+	for (int i = 0; i < estudiantes.length; i++) {
+	    for (int j = 0; j < asignaturas.length; j++) {
+		notas[i][j] = random.nextInt(10) + 1;
+		
+	    }
+	}
+	
+	// Listado de notas generadas
+
 	
 	
 	
