@@ -10,11 +10,11 @@ public class SistemaDeGestionDeCalificaciones {
 
         // VARIABLES
         int totalAsignaturas = 0;
-	    int totalEstudiantes = 0;
+	int totalEstudiantes = 0;
 
         // VECTORES
         String[] asignaturas = new String[10];
-	    String[] estudiantes = new String[30];
+	String[] estudiantes = new String[30];
 
         // MATRIZ     
         
@@ -36,7 +36,7 @@ public class SistemaDeGestionDeCalificaciones {
         
         
 	
-	    // Valida la cantidad de asignaturas que se ingresaron
+	// Valida la cantidad de asignaturas que se ingresaron
         if (totalAsignaturas < 1 || totalAsignaturas > 10) {
             System.out.println("ERROR: el numero de asignaturas debe ser entre 1 y 10.");
             return; // cierra el programa si hay un error
@@ -51,8 +51,8 @@ public class SistemaDeGestionDeCalificaciones {
         System.out.println("==================================================================\n"
                          + "==================================================================\n");
         
-	    // Listado de asignaturas ingresadas
-        System.out.println("**ASIGNATURAS INGRESADAS: **");
+	// Listado de asignaturas ingresadas
+        System.out.println("*** ASIGNATURAS INGRESADAS ***");
         for (String asignatura : asignaturas) {
             if (asignatura != null) {
                 System.out.println(asignatura);
@@ -60,24 +60,42 @@ public class SistemaDeGestionDeCalificaciones {
         }
         System.out.println("==================================================================\n"
                          + "==================================================================\n");
-
-	    System.out.println("Por favor, ingrese la cantidad de estudiantes. No debe superar el maximo de 30.");
-	    totalEstudiantes = scanner.nextInt();
 	
-	    // Valida la cantidad de estudiantes que se ingresaron
-	    if(totalEstudiantes < 1 || totalEstudiantes > 30) {
-	        System.out.println("ERROR: el numero de estudiantes debe ser entre 1 y 30.");
-	        return;	
-	    }
 	
-	    System.out.println("==================================================================\n"
+	
+	
+	System.out.println("Por favor, ingrese la cantidad de estudiantes. No debe superar el maximo de 30.");
+	totalEstudiantes = scanner.nextInt();
+	scanner.nextLine();
+	
+	// Valida la cantidad de estudiantes que se ingresaron
+	if (totalEstudiantes < 1 || totalEstudiantes > 30) {
+	    System.out.println("ERROR: el numero de estudiantes debe ser entre 1 y 30.");
+	    return;	
+	}
+	
+	System.out.println("==================================================================\n"
                          + "==================================================================\n");
-
- 	    // Ingresar estudiantes
-	    for (int i = 0; i < totalEstudiantes; i++) {
-	        System.out.println("Ingrese el nombre completo del estudiante " + (i + 1) + "<apellido, nombre1 nombre2");
-	        estudiantes[i] = scanner.nextLine();
-	    }
 	
-	    System.out.println("==================================================================\n"
+	// Ingresar cada estudiantes
+	for (int i = 0; i < totalEstudiantes; i++) {
+	    System.out.println("Ingrese el nombre completo del estudiante " + (i + 1) + ": ");
+	    estudiantes[i] = scanner.nextLine();
+	}
+	
+	System.out.println("==================================================================\n"
                          + "==================================================================\n");
+        
+	// Listado de estudiantes ingresados
+	System.out.println("");
+	
+	
+	
+	
+	
+	
+	
+
+    }
+
+}
