@@ -1,68 +1,43 @@
 package SistemaDeGestion;
 
 import java.util.Scanner;
+import java.util.Random;
 
 public class sistemaDeGestionDeCalificaciones {
 
+    // Maximo de asignaturas y estudiantes
+    static final int MAX_ASIGNATURAS = 10;
+    static final int MAX_ESTUDIANTES = 30;
+    
+    // Vector para asignaturas y estudiantes
+    static String [] asignaturas = new String[MAX_ASIGNATURAS];
+    static String [] estudiantes = new String[MAX_ESTUDIANTES];
+    
+    // Matriz para calificaciones
+    static int [][] calificaciones = new int [MAX_ESTUDIANTES][MAX_ASIGNATURAS];
+    
+    // Para ingresar datos
+    static Scanner scanner = new Scanner (System.in);
+    
+
     public static void main(String[] args) {
-        System.out.println("|*|Bienvenido al Sistema de Gestion de Calificaciones|*|"); 
         
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Presione Enter para poder continuar...");
-        scanner.nextLine();
+        // mensaje de bienvenida
         
-        System.out.println("Ingrese las asignaturas");
-        System.out.println("Ingrese el numero de asignaturas: ");
-        int cantidadDeAsignaturas = scanner.nextInt();
+        // tecla para continuar
         
-        // Valida que la cantidad de asignaturas no sea mayor de 10
-        if (cantidadDeAsignaturas < 1 || cantidadDeAsignaturas > 10) {
-            System.out.println("ERROR: el numero de asignatura a ingresar debe estar entre 1 y 10.");
-            return; // Sale del programa en caso de haber un error       
-            
-        } 
+        // ingresar cantidad de asignaturas
         
-        // Vector para almacenar las asignaturas
-        String[] asignaturas = new String[cantidadDeAsignaturas];
+        // ingresar cantidad de estudiantes
         
-        // Ingresa los nombres de las asignaturas
-        for (int j = 0; j < cantidadDeAsignaturas; j++) {
-            System.out.println("Ingrese el nombre de la asignatura " + (j + 1) + ": ");
-            asignaturas[j] = scanner.next();
-        }
+        // ingreso de califiaciones
         
-        // Asignaturas que se ingresaron
-        System.out.println("Asignaturas ingresadas: ");
-        for (String asignatura : asignaturas) {
-            System.out.println(asignatura);
-        }
-
-        System.out.println("Ingrese los estudiantes");
-        System.out.println("Ingrese la cantidad de estudiantes");
-        int cantidadDeEstudiantes = scanner.nextInt();
-        
-        // Valida que la cantidad de estudiantes no sea mayor a 30
-        if (cantidadDeEstudiantes < 1 || cantidadDeEstudiantes > 30) {
-            System.out.println("ERROR: el numero de estudiantes a ingresar debe ser entre 1 y 30.");
-            return; 
-        }
-
-        // Vector que almacena los estudiantes
-        String[] estudiantes = new String[cantidadDeEstudiantes];
+        // menu
         
         
-        for (int i = 0; i < cantidadDeEstudiantes; i++) {
-            System.out.println("Ingrese el apellido y nombre del estudiante " + (i + 1 ) + " (<apellido, nombre1 nombre2): ");
-            estudiantes[i] = scanner.next() + scanner.nextLine();
-        }
         
-        System.out.println("Estudiantes ingresados: ");
-        for (String estudiante : estudiantes){
-            System.out.println(estudiante);
-        }
-
         
 
     }
-    
+
 }
