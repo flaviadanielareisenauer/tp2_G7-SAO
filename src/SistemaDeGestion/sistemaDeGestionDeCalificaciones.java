@@ -1,43 +1,25 @@
 package SistemaDeGestion;
 
 import java.util.Scanner;
-import java.util.Random;
 
-public class sistemaDeGestionDeCalificaciones {
-
-    // Maximo de asignaturas y estudiantes
-    static final int MAX_ASIGNATURAS = 10;
-    static final int MAX_ESTUDIANTES = 30;
+public class SistemaDeGestionDeCalificaciones {
     
-    // Vector para asignaturas y estudiantes
-    static String [] asignaturas = new String[MAX_ASIGNATURAS];
-    static String [] estudiantes = new String[MAX_ESTUDIANTES];
+    static Scanner scanner = new Scanner(System.in);
     
-    // Matriz para calificaciones
-    static int [][] calificaciones = new int [MAX_ESTUDIANTES][MAX_ASIGNATURAS];
+    // variables
+    int cantidadDeAsignaturas = scanner.nextInt();
     
-    // Para ingresar datos
-    static Scanner scanner = new Scanner (System.in);
-    
+   
 
     public static void main(String[] args) {
+        // Mensaje de bienvenida
+        System.out.println("*||*Bienvenido al Sistema de Gestion de Calificaciones*||*");
+        System.out.println("Para continuar presione Enter...");
+        scanner.nextLine();
         
-        // mensaje de bienvenida
-        
-        // tecla para continuar
-        
-        // ingresar cantidad de asignaturas
-        
-        // ingresar cantidad de estudiantes
-        
-        // ingreso de califiaciones
-        
-        // menu
+        // cantidad de asignaturas
+        System.out.println("Ingrese la cantidad de asignaturas: ");
         
         
-        
-        
-
     }
-
-}
+    
