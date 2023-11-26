@@ -32,7 +32,7 @@ public class SistemaDeGestionDeCalificaciones {
         scanner.nextLine();
         
         // Ingresar la cantiad de asignaturas
-        System.out.println("Por favor, ingresa la cantidad de asignaturas. Las mismas no pueden superar un maximo de 10: ");
+        System.out.println("Por favor, ingrese la cantidad de asignaturas. Las mismas no pueden superar un maximo de 10: ");
         totalAsignaturas = scanner.nextInt();
         
         for (int j = 0; j < totalAsignaturas; j++) {
@@ -40,6 +40,15 @@ public class SistemaDeGestionDeCalificaciones {
             asignaturas[j] = scanner.next();
         }
         
+        // Asignaturas que se ingresaron
+        System.out.println("Asignaturas ingresadas: ");
+        for (String asignatura : asignaturas) {
+            if(asignatura != null) {
+               System.out.println(asignatura);                
+            }
+
+                  
+        }
 
     }
 
