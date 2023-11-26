@@ -87,7 +87,15 @@ public class SistemaDeGestionDeCalificaciones {
                          + "==================================================================\n");
         
 	// Listado de estudiantes ingresados
-	System.out.println("");
+	System.out.println("*** ESTUDIANTES INGRESADOS ***");
+	for (String estudiante : estudiantes) {
+	    if(estudiante != null) {
+		System.out.println(estudiante);
+	    }
+	}
+	
+	System.out.println("==================================================================\n"
+                         + "==================================================================\n");
 	
 	
 	
