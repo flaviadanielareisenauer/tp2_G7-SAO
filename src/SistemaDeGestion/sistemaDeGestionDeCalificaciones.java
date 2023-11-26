@@ -37,6 +37,16 @@ public class sistemaDeGestionDeCalificaciones {
             System.out.println(asignatura);
         }
 
+        System.out.println("Ingrese los estudiantes");
+        System.out.println("Ingrese la cantidad de estudiantes");
+        int cantidadDeEstudiantes = scanner.nextInt();
+        
+        // Valida que la cantidad de estudiantes no sea mayor a 30
+        if (cantidadDeEstudiantes < 1 || cantidadDeEstudiantes > 30) {
+            System.out.println("ERROR: el numero de estudiantes a ingresar debe ser entre 1 y 30.");
+            return; 
+        }
+
     }
     
 }
