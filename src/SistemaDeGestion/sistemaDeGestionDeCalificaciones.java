@@ -23,8 +23,8 @@ public class SistemaDeGestionDeCalificaciones {
         // Mensaje de bienvenida
         System.out.println(
                 "************************************************************\n"
-              + "<<<<<BIENVENIDO AL SISTEMA DE GESTION DE CALIFICACIONES>>>>>\n"
-              + "************************************************************\n"
+                + "<<<<<BIENVENIDO AL SISTEMA DE GESTION DE CALIFICACIONES>>>>>\n"
+                + "************************************************************\n"
         );
         
         // Enter para continuar...
@@ -33,8 +33,12 @@ public class SistemaDeGestionDeCalificaciones {
         
         // Ingresar la cantiad de asignaturas
         System.out.println("Por favor, ingresa la cantidad de asignaturas. Las mismas no pueden superar un maximo de 10: ");
-        totalAsignaturas = scanner.nextInt();    
+        totalAsignaturas = scanner.nextInt();
         
+        for (int j = 0; j < totalAsignaturas; j++) {
+            System.out.println("Ingrese el nombre de la asignatura " + (j + 1) + ": ");
+            asignaturas[j] = scanner.next();
+        }
         
 
     }
