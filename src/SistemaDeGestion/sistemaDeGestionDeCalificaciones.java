@@ -47,6 +47,22 @@ public class sistemaDeGestionDeCalificaciones {
             return; 
         }
 
+        // Vector que almacena los estudiantes
+        String[] estudiantes = new String[cantidadDeEstudiantes];
+        
+        
+        for (int i = 0; i < cantidadDeEstudiantes; i++) {
+            System.out.println("Ingrese el apellido y nombre del estudiante " + (i + 1 ) + " (<apellido, nombre1 nombre2): ");
+            estudiantes[i] = scanner.next() + scanner.nextLine();
+        }
+        
+        System.out.println("Estudiantes ingresados: ");
+        for (String estudiante : estudiantes){
+            System.out.println(estudiante);
+        }
+
+        
+
     }
     
 }
