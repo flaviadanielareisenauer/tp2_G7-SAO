@@ -122,5 +122,37 @@ public class GroupSevenSystem {
 		return alumnos;
    	}
 
-    
+	// INGRESAR CALIFICACIONES 
+    public static int[][] cargarCalificaciones(String[] alumnos, String[] asignaturas) {
+		int totalAlumnos = alumnos.length;
+		int totalAsignaturas = asignaturas.length;
+		int[][] calificaciones = new int[totalAlumnos][totalAsignaturas];
+		Random rand = new Random();
+
+		for (int i = 0; i < totalAlumnos; i++) {
+	    	for (int j = 0; j < totalAsignaturas; j++) {
+				calificaciones[i][j] = rand.nextInt(10) + 1; // genera un numero aleatorio que va del 0 al 10. 
+	    	}
+		}
+
+		System.out.println();
+		System.out.println("==================================\n"
+			 			 + "    CALIFICACIONES INGRESADAS\n     "
+						 + "==================================\n");
+
+		// LISTA DE CALIFICACIONES INGRESADAS
+		for (int i = 0; i < totalAlumnos; i++) {
+	    	System.out.println("CALIFICACIONES DE " + alumnos[i] + ":");
+
+	    	System.out.printf("%-15s%-15s\n", "Asignatura", "Calificacion"); // las columnas van a tener un ancho de 15 caracteres
+
+	    	for (int j = 0; j < totalAsignaturas; j++) {
+			System.out.printf("%-15s%-15s\n", asignaturas[j], calificaciones[i][j]);
+	    	}
+	    	System.out.println();
+		}
+
+		return calificaciones;
+    }
+
 }
