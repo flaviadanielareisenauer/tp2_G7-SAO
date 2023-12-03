@@ -7,12 +7,13 @@ public class GroupSevenSystem {
 
     public static void main(String[] args) {
 
-	// Mensaje de bienvenida
+	// MENSAJE DE BIENVENIDA
 	System.out.println("******* || GROUP SEVEN SYSTEM || *******");
 	bienvenida("Bienvenido a su Sistema De Gestion preferido!\n");
+	// Cargar asignaturas y alumnos
 	String[] asignaturas = cargarAsignaturas();
 	String[] alumnos = cargarAlumnos();
-	cargarCalificaciones(alumnos, asignaturas);
+	//cargarCalificaciones(alumnos, asignaturas);
     }
 
     public static void bienvenida(String mensaje) {
@@ -22,7 +23,7 @@ public class GroupSevenSystem {
 	scanner.nextLine();
     }
 
-    // INGRESAR CANTIDAD DE MATERIAS 
+    // INGRESAR CANTIDAD DE MATERIAS - no mas de 10.  
     public static String[] cargarAsignaturas() {
 	Scanner scanner = new Scanner(System.in);
 	int num;
@@ -34,8 +35,8 @@ public class GroupSevenSystem {
 	    // VALIDAR - MENSAJE DE ERROR
 	    if (num > 10) {
 		System.out.println("=====================================================================\n"
-			+ "     ERROR! el numero ingresado es mayor a 10, intente de nuevo!\n"
-			+ "=====================================================================\n");
+				 + "     ERROR! el numero ingresado es mayor a 10, intente de nuevo!\n"
+			         + "=====================================================================\n");
 	    }
 
 	} while (num > 10);
@@ -49,11 +50,11 @@ public class GroupSevenSystem {
 	    asignaturas[i] = scanner.nextLine();
 	}
 
-	// LISTAR MATERIAS INGRESADAS
+	// LISTAR MATERIAS INGRESADAS - devuelve un array de Strings con los nombres de las asignaturas.
 	System.out.println();
 	System.out.println("==================================\n"
-		+ "     ASIGNATURAS INGRESADAS\n"
-		+ "==================================\n");
+		         + "     ASIGNATURAS INGRESADAS\n"
+		         + "==================================\n");
 
 	for (String asignatura : asignaturas) {
 	    if (asignatura != null) {
@@ -63,7 +64,7 @@ public class GroupSevenSystem {
 	return asignaturas;
     }
 
-    // INGRESAR CANTIDAD DE ALUMNOS
+    // INGRESAR CANTIDAD DE ALUMNOS - no mas de 30
     public static String[] cargarAlumnos() {
 	Scanner scanner = new Scanner(System.in);
 	System.out.println();
@@ -77,8 +78,8 @@ public class GroupSevenSystem {
 	    // VALIDAR - MENSAJE DE ERROR
 	    if (num > 30) {
 		System.out.println("=====================================================================\n"
-			+ "     ERROR! el numero ingresado es mayor a 30, intente de nuevo!\n"
-			+ "=====================================================================\n");
+			         + "     ERROR! el numero ingresado es mayor a 30, intente de nuevo!\n"
+			         + "=====================================================================\n");
 	    }
 
 	} while (num > 30);
@@ -107,10 +108,10 @@ public class GroupSevenSystem {
 
 	System.out.println();
 	System.out.println("==================================\n"
-		+ "        ALUMNOS INGRESADOS\n"
-		+ "==================================\n");
+		         + "        ALUMNOS INGRESADOS\n"
+		         + "==================================\n");
 
-	// LISTAR ALUMNOS INGRESADOS
+	// LISTAR ALUMNOS  - devuelve un array de Strings con los nombres de los alumnos
 	for (String alumno : alumnos) {
 	    if (alumno != null) {
 		System.out.println(alumno);
@@ -118,14 +119,23 @@ public class GroupSevenSystem {
 	}
 	return alumnos;
     }
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+/*
     public static int[][] cargarCalificaciones(String[] alumnos, String[] asignaturas) {
 	Scanner scanner = new Scanner(System.in);
 	int numAlumnos = alumnos.length;
 	int numAsignaturas = asignaturas.length;
 	int[][] calificaciones = new int[numAlumnos][numAsignaturas];
 
-	System.out.println();
 	System.out.println("Ahora que deseas: ");
 	System.out.println("1 - Cargar calificaciones manualmente. ");
 	System.out.println("2 - Generar calificaciones automaticamente. ");
@@ -147,6 +157,15 @@ public class GroupSevenSystem {
 		    calificaciones[i][j] = random.nextInt(10) + 1;
 		}
 	    }
+	    System.out.println("* NOTAS INGRESADAS *");
+	    for (int i = 0; i < numAlumnos; i++) {
+		System.out.println(alumnos[i] + ": ");
+
+		for (int j = 0; j < numAsignaturas; j++) {
+		    System.out.print(asignaturas[j] + " = " + calificaciones[i][j] + " ");
+		}
+		System.out.println();
+	    }
 	}
 	for (int i = 0; i < numAlumnos; i++) {
 	    System.out.println("Calificaciones para " + alumnos[i] + ":");
@@ -156,4 +175,6 @@ public class GroupSevenSystem {
 	}
 	return calificaciones;
     }
+*/
 }
+
