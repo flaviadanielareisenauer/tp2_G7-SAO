@@ -239,6 +239,35 @@ public class GroupSevenSystem {
 	    System.out.println("  ---------------------------");
 	}
     }
+   // BUSCAR CALIFICACIONES DE UN ESTUDIANTE POR SU NOMBRE
+    public static void buscarEstudiante(String[] alumnos, String[] asignaturas, int[][] calificaciones) {
+	Scanner scanner = new Scanner(System.in);
+	System.out.println("==================================\n"
+			 + "     BUSQUEDA DE ESTUDIANTES\n"
+		         + "==================================\n");
+
+	System.out.println("Ingrese el nombre del estudiante a buscar: ");
+	String nombreBuscado = scanner.nextLine();
+	boolean encontrado = false;
+	System.out.println();
+
+	for (int i = 0; i < alumnos.length; i++) {
+	    if (alumnos[i].equalsIgnoreCase(nombreBuscado)) {
+		encontrado = true;
+
+		System.out.println("Calificaciones de " + alumnos[i] + ":");
+
+		for (int j = 0; j < asignaturas.length; j++) {
+		    System.out.println(asignaturas[j] + ": " + calificaciones[i][j]);
+		}
+		break;
+	    }
+
+	}
+	if (!encontrado) {
+	    System.out.println("ESTUDIANTE NO ENCONTRADO");
+	}
+    }
 
 
 }
