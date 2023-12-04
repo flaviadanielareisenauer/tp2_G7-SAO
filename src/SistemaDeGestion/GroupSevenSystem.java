@@ -213,7 +213,32 @@ public class GroupSevenSystem {
 	    System.out.println(alumnos[i] + ": Promedio = " + promedio);
 	}
     }
+    // MOSTRAR LA CALIFICACION MAS ALTA Y MAS BAJA DE CADA ASIGNATURA
+    public static void mostrarEstadisticas(String[] asignaturas, int[][] calificaciones) {
+	System.out.println("==================================\n"
+			 + "           ESTADISTICAS\n"
+		         + "==================================\n");
 
+	for (int j = 0; j < asignaturas.length; j++) {
+	    int max = calificaciones[0][j];
+	    int min = calificaciones[0][j];
+
+	    for (int i = 1; i < calificaciones.length; i++) {
+		if (calificaciones[i][j] > max) {
+		    max = calificaciones[i][j];
+		}
+
+		if (calificaciones[i][j] < min) {
+		    min = calificaciones[i][j];
+		}
+	    }
+	    
+	    System.out.println("Asignatura: " + asignaturas[j]);
+	    System.out.println("  - Maxima   : " + max);
+	    System.out.println("  - Minima   : " + min);
+	    System.out.println("  ---------------------------");
+	}
+    }
 
 
 }
