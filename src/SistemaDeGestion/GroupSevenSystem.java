@@ -269,5 +269,26 @@ public class GroupSevenSystem {
 	}
     }
 
+    // ESTUDIANTE DESTACADO 
+    public static void estudiantesDestacados(String[] alumnos, int[][] calificaciones) {
+	System.out.println("==================================\n"
+			 + "   ESTUDIANTES DESTACADOS\n"
+		         + "==================================\n");
+
+	for (int i = 0; i < alumnos.length; i++) {
+	    double promedio = 0.0;
+
+	    for (int j = 0; j < calificaciones[i].length; j++) {
+		promedio += calificaciones[i][j];
+	    }
+
+	    promedio /= calificaciones[i].length;
+
+	    if (promedio > 9.0) {
+		System.out.println(alumnos[i] + ": Promedio = " + promedio);
+	    }
+	}
+    } 
+
 
 }
