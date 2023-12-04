@@ -195,7 +195,24 @@ public class GroupSevenSystem {
 
 	} while (opciones != '5');
     }
+  
+    // CALCULA EL PROMEDIO DE CALIFICACIONES DE UN ESTUDIANTE
+    public static void calcularPromedios(String[] alumnos, String[] asignaturas, int[][] calificaciones) {
+	System.out.println("==================================\n"
+			 + "      PROMEDIO DE CALFICACIONES\n"
+			 + "==================================\n");
 
+	for (int i = 0; i < alumnos.length; i++) {
+	    double promedio = 0.0;
+
+	    for (int j = 0; j < asignaturas.length; j++) {
+		promedio += calificaciones[i][j];
+	    }
+	    promedio /= asignaturas.length;
+
+	    System.out.println(alumnos[i] + ": Promedio = " + promedio);
+	}
+    }
 
 
 
