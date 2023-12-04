@@ -154,5 +154,49 @@ public class GroupSevenSystem {
 
 		return calificaciones;
     }
+    // MENU PRINCIPAL
+    public static void mostrarMenu(String[] alumnos, String[] asignaturas, int[][] calificaciones) {
+	Scanner scanner = new Scanner(System.in);
+	char opciones;
+
+	do {
+	    System.out.println("==================================\n");
+	    System.out.println("	    MENU PRINCIPAL");
+	    System.out.println("==================================\n");
+	    System.out.println("1 - Calcular promedios");
+	    System.out.println("2 - Ver estadisticas");
+	    System.out.println("3 - Buscar estudiantes");
+	    System.out.println("4 - Estudiantes destacados");
+	    System.out.println("5 - Salir del programa");
+
+	    System.out.println("\nSeleccione una de las opciones: ");
+
+	    opciones = scanner.next().charAt(0);
+
+	    switch (opciones) {
+		case '1':
+		    calcularPromedios(alumnos, asignaturas, calificaciones);
+		    break;
+		case '2':
+		    mostrarEstadisticas(asignaturas, calificaciones);
+		    break;
+		case '3':
+		    buscarEstudiante(alumnos, asignaturas, calificaciones);
+		    break;
+		case '4':
+		    estudiantesDestacados(alumnos, calificaciones);
+		    break;
+		case '5':
+		    System.out.println("Gracias por haber elegido a GROUP SEVEN SYSTEM!!");
+		    break;
+		default:
+		    System.out.println("Opcion no valida. Por favor, seleccione de nuevo.");
+	    }
+
+	} while (opciones != '5');
+    }
+
+
+
 
 }
